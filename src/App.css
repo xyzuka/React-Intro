@@ -3,25 +3,32 @@
 * {
   font-family: 'Inter', sans-serif;
   box-sizing: border-box;
-  color: #DEEBF8;
 }
 
 body {
   margin: 0;
-  background-image: url(./assets/react-logo-large.png);
-  background-repeat: no-repeat;
-  background-size: 200px;
-  background-position-x: right;
-  background-position-y: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
 }
 
-.header {
+/* NAV BAR STYLES */
+
+nav {
   display: flex;
   align-items: center;
+  background-color: #ffffff;
+  padding: 30px 25px;
+  height: 100px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+nav.dark {
   background-color: #21222A;
-  height: 90px;
-  padding: 30px;
 }
 
 .logo {
@@ -38,8 +45,82 @@ body {
   font-size: 16px;
 }
 
-body {
+.toggle {
+  display: flex;
+  align-items: center;
+}
+
+.toggle p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.toggle-slider {
+  width: 25px;
+  height: 13px;
+  background-color: #2B283A;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: content-box;
+}
+
+nav.dark .toggle-slider {
+  border-color: white;
+  background-color: #F5F5F5;
+}
+
+.toggle-slider-circle {
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+nav.dark .toggle-slider-circle {
+  background-color: black;
+}
+
+.toggle-light {
+  color: #2B283A;
+}
+
+nav.dark .toggle-light {
+  color: #918E9B;
+}
+
+.toggle-dark {
+  color: #D5D4D8;
+}
+
+nav.dark .toggle-dark {
+  color: #FFFFFF;
+}
+
+nav.dark .toggle-slider {
+  justify-content: flex-end;
+}
+
+/* MAIN STYLES */
+
+main {
+  padding: 57px 27px;
+  background-image: url(./assets/react-logo-large.png);
+  /* background-color: #ffffff; */
+  background-repeat: no-repeat;
+  background-position: right center;
+  flex: 1 1 auto;
+  color: #2B283A;
+}
+
+main.dark {
+  background-image: url(./assets/react-logo-large.png);
   background-color: #282D35;
+  color: white;
 }
 
 .content-header {
